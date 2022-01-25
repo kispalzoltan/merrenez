@@ -1,0 +1,14 @@
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+app-game-card{
+    width: 500px;
+    height: 500px;
+    margin: 4px;
+}
+mat-card{
+    height: 500px;
+}
