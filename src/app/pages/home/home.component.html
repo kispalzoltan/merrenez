@@ -1,0 +1,34 @@
+<span [ngSwitch]="page">
+  <span *ngSwitchCase="'registration'" class="container">
+    <app-registration></app-registration>
+  </span>
+
+  <span *ngSwitchCase="'opinion'" class="container">
+
+  </span>
+
+  <span *ngSwitchCase="'patients'" class="container">
+
+  </span>
+  <span *ngSwitchCase="'home'" >
+
+      <app-nav [categories]="categories" ></app-nav>
+    <span [ngSwitch]="category">
+      <span *ngSwitchCase="'score'" class="container">
+        <app-score-card *ngFor="let item of scores" [score]="item"></app-score-card>
+        <button mat-fab class="action-btn" (click)="openDialog()">
+            <mat-icon>add</mat-icon>
+          </button>
+      </span>
+      <span *ngSwitchCase="'game'" class="container">
+
+      </span>
+      <span *ngSwitchDefault>
+        <app-splash-screen></app-splash-screen>
+      </span>
+    </span>
+  </span>
+  <span *ngSwitchDefault>
+<app-login></app-login> 
+ </span>
+</span>
