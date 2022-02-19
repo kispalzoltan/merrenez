@@ -5,6 +5,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {MatMenuModule} from '@angular/material/menu';
+import { NavRoutingModule } from './nav-routing.module';
 
 
 
@@ -13,7 +14,7 @@ import {MatMenuModule} from '@angular/material/menu';
     NavComponent
   ],
   imports: [
-    CommonModule, MatToolbarModule, MatButtonModule, MatIconModule, MatMenuModule
+    CommonModule, MatToolbarModule, MatButtonModule, MatIconModule, MatMenuModule, NavRoutingModule
   ],exports:[NavComponent]
 })
 export class NavModule { }

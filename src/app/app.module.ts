@@ -5,16 +5,21 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeModule } from './pages/home/home.module';
 import { OpinionCardComponent } from './pages/opinion/card/opinion-card.component';
+import { AppRoutingModule } from './app-routing.module';
+import { BoardComponent } from './pages/board/board.component';
+import { BoardModule } from './pages/board/board.module';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    HomeModule
+    HomeModule,
+    AppRoutingModule,
+    BoardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
