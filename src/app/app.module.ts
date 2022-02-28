@@ -6,8 +6,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeModule } from './pages/home/home.module';
 import { OpinionCardComponent } from './pages/opinion/card/opinion-card.component';
 import { AppRoutingModule } from './app-routing.module';
-import { BoardComponent } from './pages/board/board.component';
 import { BoardModule } from './pages/board/board.module';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import { NavModule } from './pages/nav/nav.module';
+
+
 
 
 @NgModule({
@@ -17,9 +24,15 @@ import { BoardModule } from './pages/board/board.module';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    HomeModule,
+
     AppRoutingModule,
-    BoardModule
+    BoardModule,
+    FlexLayoutModule,
+    MatIconModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatToolbarModule,
+    HomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

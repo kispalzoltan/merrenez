@@ -28,6 +28,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.category='';
 
+
   }
   ngOnDestroy(): void {
     delete this.category;
