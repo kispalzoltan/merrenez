@@ -1,11 +1,14 @@
-<div class="centering">
+<div class="centering" *ngIf="!isSignedIn">
     <mat-card class="reg-card">
       <form>
         <h3>Regisztráció</h3>
         <br>
         <div><button mat-button color="accent">BEJELENTKEZÉS</button></div>
         <br>
-        <button mat-raised-button color="primary" class="max-width">REGISZTRÁCIÓ</button>
+        <input type="text" name="emailSignup" #emailSignup>
+        <input type="password" name="passwordSignup" #passwordSignup>
+
+        <button mat-raised-button color="primary" class="max-width" (click)="fbservice.signup(emailSignup.value,passwordSignup.value)">REGISZTRÁCIÓ</button>
       </form>
     </mat-card>
   </div>

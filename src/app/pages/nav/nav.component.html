@@ -1,14 +1,17 @@
 <mat-toolbar color="blue">
     <mat-toolbar-row>
-      <a mat-button>
+      <a mat-button routerLink="/">
         Merre Néz
       </a>
-      <button mat-button *ngFor="let item of categories">
-        {{item.title}}&nbsp;
-        <mat-icon>{{item.icon}}</mat-icon>
-      </button>
+      <a button mat-button routerLink="/game">
+        Game
+        <mat-icon>videogame_asset</mat-icon>
+      </a>
+      <a mat-button routerLink="/score">
+        Score
+      </a>
       <span style="flex: 1 1;"></span>
-      <button mat-button [matMenuTriggerFor]="menu">
+      <button mat-button  [matMenuTriggerFor]="menu">
         &nbsp;
         <mat-icon>arrow_drop_down</mat-icon>
       </button>
@@ -34,3 +37,41 @@
     </mat-toolbar-row>
   
   </mat-toolbar>
+  <!-- <div> 
+    <mat-toolbar color="primary">
+      <div fxShow="true" fxHide.gt-sm="true">
+        <button mat-icon-button (click)="sidenav.toggle()">
+          <mat-icon>menu</mat-icon>
+        </button>
+      </div>
+  
+      <a mat-button class="companyName" routerLink="/">
+        <span>Site name</span>
+      </a>
+      <span class="example-spacer"></span>
+      <div fxShow="true" fxHide.lt-md="true">
+        <a mat-button routerLink="/game">Game</a>
+        <a mat-button routerLink="/prices">Prices</a>
+        <a mat-button routerLink="/start-page">Start page</a>
+        <a mat-button routerLink="/offer">Offer</a>
+        <a mat-button routerLink="/contact">Contact</a>
+      </div>
+  
+    </mat-toolbar>
+    <mat-sidenav-container fxFlexFill class="example-container">
+  
+      <mat-sidenav color="primary" #sidenav fxLayout="column" mode="over"  opened="false" fxHide.gt-sm="true">
+        <div fxLayout="column">
+          <a mat-button routerLink="/game">game</a>
+          <a mat-button routerLink="/prices">Prices</a>
+          <a mat-button routerLink="/start-page">Start page</a>
+          <a mat-button routerLink="/offer">Offer</a>
+          <a mat-button routerLink="/contact">asd</a>
+        </div>
+      </mat-sidenav>
+      <mat-sidenav-content fxFlexFill></mat-sidenav-content>
+    </mat-sidenav-container>
+  </div> -->
+
+  
+  <router-outlet></router-outlet>

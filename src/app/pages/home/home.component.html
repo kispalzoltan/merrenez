@@ -1,3 +1,5 @@
+
+<button (click)="logout()"></button>
 <span [ngSwitch]="page">
   <span *ngSwitchCase="'registration'" class="container">
     <app-registration></app-registration>
@@ -12,7 +14,7 @@
   </span>
   <span *ngSwitchCase="'home'" >
 
-      <app-nav [categories]="categories" ></app-nav>
+      <app-nav ></app-nav>
     <span [ngSwitch]="category">
       <span *ngSwitchCase="'score'" class="container">
         <app-score-card *ngFor="let item of scores" [score]="item"></app-score-card>

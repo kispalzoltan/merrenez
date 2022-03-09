@@ -1,12 +1,14 @@
-<div class="centering">
-    <mat-card class="log-card">
-      <form>
-        <h3>Bejelentkezés</h3>
-        <br>
-        <div><button mat-button color="accent">REGISZTRÁCIÓ</button></div>
-        <br>
-        <button mat-raised-button color="primary" class="max-width">BEJELENTKEZÉS</button>
-      </form>
-    </mat-card>
-  </div>
-  
+<div class="centering" *ngIf="!isSignedIn">
+  <mat-card class="reg-card">
+    <form>
+      <h3>Regisztráció</h3>
+      <br>
+      <div><button mat-button color="accent">BEJELENTKEZÉS</button></div>
+      <br>
+      <input type="text" name="email" #email>
+      <input type="password" name="password" #password>
+
+      <button mat-raised-button color="primary" class="max-width" (click)="fbservice.signup(email.value,password.value)">BEJELENTKEZÉS</button>
+    </form>
+  </mat-card>
+</div>

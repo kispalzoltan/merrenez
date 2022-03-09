@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home.component';
 import { ScoreCardModule } from './../score/card/score-card.module';
-import { SplashScreenComponent } from '../splash-screen/splash-screen.component';
 import { SplashScreenModule } from '../splash-screen/splash-screen.module';
 import { GameCardModule } from '../game/card/game-card.module';
 import { FormsModule } from '@angular/forms';
