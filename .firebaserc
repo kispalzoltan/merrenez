@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "merrenez"
+  },
+  "targets": {
+    "merrenez": {
+      "hosting": {
+        "SzakdogaMerrenez": [
+          "merrenez"
+        ]
+      }
+    }
   }
 }

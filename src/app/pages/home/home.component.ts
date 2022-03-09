@@ -1,9 +1,11 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit, Output } from '@angular/core';
 import { PATIENTS } from 'src/app/shared/database/patient.database';
 import { Patient } from 'src/app/shared/models/patient.model';
+import { EventEmitter } from  '@angular/core';
 import { patientAddComponent } from '../patient/add/patient-add.component';
 import { CATEGORIES } from './../../shared/database/category.database';
 import { SCORES } from './../../shared/database/score.database';
+import { FirebaseService } from 'src/app/services/firebase.service';
 
 
 
@@ -23,7 +25,9 @@ export class HomeComponent implements OnInit, OnDestroy {
   page = 'home';
 
 
-  constructor() { }
+@Output() isLogout = new EventEmitter<void>()
+
+  constructor(public firebaseService: FirebaseService) { }
 
   ngOnInit(): void {
     this.category='';
@@ -44,4 +48,9 @@ export class HomeComponent implements OnInit, OnDestroy {
     });
   }
 
+
+  logout(){
+    this.firebaseService.logout();
+    this.isLogout.emit();
+  }
 }

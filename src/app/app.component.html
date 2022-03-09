@@ -1,6 +1,3 @@
-
-
-
-  <app-home></app-home>
+<app-home *ngIf="isSignedIn"(isLogout)="handleLogout()"></app-home>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <router-outlet></router-outlet>

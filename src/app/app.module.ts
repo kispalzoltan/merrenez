@@ -13,6 +13,11 @@ import { MatButtonModule } from '@angular/material/button';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { NavModule } from './pages/nav/nav.module';
+import { AngularFireModule } from '@angular/fire';
+import { environment } from 'src/environments/environment';
+import { AngularFireAuthModule } from "@angular/fire/auth";
+import { FirebaseService } from './services/firebase.service';
+
 
 
 
@@ -32,9 +37,11 @@ import { NavModule } from './pages/nav/nav.module';
     MatButtonModule,
     MatSidenavModule,
     MatToolbarModule,
-    HomeModule
+    HomeModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAuthModule
   ],
-  providers: [],
+  providers: [FirebaseService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
